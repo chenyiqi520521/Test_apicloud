@@ -17,6 +17,7 @@
         android:xlargeScreens="true" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 往SDCard写入数据权限 -->
@@ -41,7 +42,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.MANAGE_NEWLAND" />
-
+    <!-- 测试 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	
+    <!-- 允许备份，允许硬件加速 -->
     <application
         android:name="com.uzmap.pkg.uzapp.UZApplication"
         android:allowBackup="true"
@@ -57,6 +61,10 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
+        
+        <meta-data 
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="c3c9582188bee79ea6138e3234f754fe"  />
 
         <activity
             android:name="com.uzmap.pkg.EntranceActivity"
@@ -361,5 +369,5 @@
         <service android:name="com.location.LocationSvc" >
         </service>
     </application>
-
+	
 </manifest>
